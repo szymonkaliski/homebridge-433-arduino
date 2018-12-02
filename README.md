@@ -149,7 +149,7 @@ void loop() {
 ### On the homebridge server
 #### Install software
 1. Install homebridge using: npm install -g homebridge
-2. Install this plugin using: npm install -g homebridge-433-arduino
+2. Install this plugin using: npm install -g homebridge-433-arduino-s1g
 3. Update your configuration file. See the sample below.
 
 #### Configure config.json
@@ -241,6 +241,7 @@ Download the modified rc-switch branch "protocollessreceiver", it includes the d
 
 Credit goes to
 - rainlake (https://github.com/rainlake/homebridge-platform-rcswitch)
+- normen (https://github.com/normen/homebridge-433-arduino)
 
 ## License
 
