@@ -1,4 +1,11 @@
 # homebridge-433-arduino-s1g
+This project is fork of homebridge-433-arduino. 
+This project clones the release 0.9.5 of the original one with only one change: the support to the new serialport API interfaces. 
+Since the original homebridge-433-arduino 0.9.5 is compatible with serialport up to its 4.*.* release, it can't be used with most recent versions. 
+I found myself stucked here during a dependency update chain due to a new homebridge plugin: it was impossible for me to build on my raspberry old version of serialport with the new stack (node, npm, homebridge). So you can use this version of the plugin with most recents versions of serialport, testesd so far with 7.1.0
+
+
+# homebridge-433-arduino
 [![NPM Version](https://img.shields.io/npm/v/homebridge-433-arduino.svg)](https://www.npmjs.com/package/homebridge-433-arduino)
 
 A homebridge plugin to control 433MHz switches and receive 433MHz switch signals using an Arduino Micro connected via USB to send and receive data.
@@ -142,7 +149,7 @@ void loop() {
 ### On the homebridge server
 #### Install software
 1. Install homebridge using: npm install -g homebridge
-2. Install this plugin using: npm install -g homebridge-433-arduino
+2. Install this plugin using: npm install -g homebridge-433-arduino-s1g
 3. Update your configuration file. See the sample below.
 
 #### Configure config.json
@@ -234,6 +241,7 @@ Download the modified rc-switch branch "protocollessreceiver", it includes the d
 
 Credit goes to
 - rainlake (https://github.com/rainlake/homebridge-platform-rcswitch)
+- normen (https://github.com/normen/homebridge-433-arduino)
 
 ## License
 
