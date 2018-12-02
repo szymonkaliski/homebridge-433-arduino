@@ -15,10 +15,7 @@ function ArduinoSwitchPlatform(log, config) {
     self.log = log;
     if(config.input_output_timeout) inputOutputTimeout = config.input_output_timeout;
     if(config.serial_port_in == config.serial_port_out){
-        port = new SerialPort(self.config.serial_port_in, {
-            baudRate: 9600//,
-            //parser: SerialPort.parsers.readline("\n")
-        });
+        port = new SerialPort(self.config.serial_port_in, {baudRate: 9600});
         inPort = port.pipe(new Readline({ delimiter: '\n' }))
 
         outPort = inPort;
@@ -27,17 +24,11 @@ function ArduinoSwitchPlatform(log, config) {
     }
     else{
         if(self.config.serial_port_in){
-            port = new SerialPort(self.config.serial_port_in, {
-                baudRate: 9600//,
-                //parser: SerialPort.parsers.readline("\n")
-            });
+            port = new SerialPort(self.config.serial_port_in, {baudRate: 9600});
             inPort = port.pipe(new Readline({ delimiter: '\n' }))
         }
         if(self.config.serial_port_out){
-            port = new SerialPort(self.config.serial_port_in, {
-                baudRate: 9600//,
-                //parser: SerialPort.parsers.readline("\n")
-            });
+            port = new SerialPort(self.config.serial_port_out, {baudRate: 9600});
             outPort = port.pipe(new Readline({ delimiter: '\n' }))
             blockPort = new Device(outPort);
         }
