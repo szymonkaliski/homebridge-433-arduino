@@ -16,17 +16,17 @@
     "433",
     "rcswitch"
   ],
-  "author": "Normen Hansen",
+  "author": "Ivan Martinelli",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/normen/homebridge-433-arduino/issues"
+    "url": "https://github.com/s1gmund80/homebridge-433-arduino/issues"
   },
-  "homepage": "https://github.com/normen/homebridge-433-arduino#readme",
+  "homepage": "https://github.com/s1gmund80/homebridge-433-arduino#readme",
   "engines": {
     "homebridge": ">=0.4.0",
     "node": ">=0.12.0"
   },
   "dependencies": {
-    "serialport": ">=4.0.0"
+    "serialport": ">=5.0.0"
   }
 }
