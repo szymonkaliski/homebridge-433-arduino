@@ -1,4 +1,4 @@
-# homebridge-433-arduino-s1g
+# homebridge-433-arduino
 This project is fork of homebridge-433-arduino. 
 This project clones the release 0.9.5 of the original one with only one change: the support to the new serialport API interfaces. 
 Since the original homebridge-433-arduino 0.9.5 is compatible with serialport up to its 4.*.* release, it can't be used with most recent versions. 
@@ -149,7 +149,7 @@ void loop() {
 ### On the homebridge server
 #### Install software
 1. Install homebridge using: npm install -g homebridge
-2. Install this plugin using: npm install -g homebridge-433-arduino-s1g
+2. Install this plugin using: npm install -g homebridge-433-arduino
 3. Update your configuration file. See the sample below.
 
 #### Configure config.json
